@@ -24,6 +24,7 @@ export default function part(){
                 <Text>หน้า{fa}หลัง{ba}ข้าง1{aa}ข้าง2{da}</Text>
                 
                 <TextInput
+                style={Styles.textInput}
                 value={fa.toString()}
                 onChangeText={(w) => Setf(Number(w))}
                 style={Styles.textInput}
@@ -31,6 +32,7 @@ export default function part(){
                 />
 
                 <TextInput
+                style={Styles.textInput}
                 value={ba.toString()}
                 onChangeText={(l) => Setb(Number(l))}
                 style={Styles.textInput}
@@ -38,6 +40,7 @@ export default function part(){
                 />
 
                 <TextInput
+                style={Styles.textInput}   
                 value={aa.toString()}
                 onChangeText={(l) => Seta(Number(l))}
                 style={Styles.textInput}
@@ -45,6 +48,7 @@ export default function part(){
                 />
 
                 <TextInput
+                style={Styles.textInput}    
                 value={da.toString()}
                 onChangeText={(l) => Setd(Number(l))}
                 style={Styles.textInput}
