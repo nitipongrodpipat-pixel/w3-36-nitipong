@@ -4,16 +4,17 @@ import { use, useState } from "react";
 
 export default function part(){
 
-    const [fa, Setf] = useState(0)
-    const [ba, Setb] = useState(0)
-    const [aa,Seta] = useState(0)
-    const [da, Setd] = useState(0)
+    const [f, Setf] = useState(0)
+    const [b, Setb] = useState(0)
+    const [a,Seta] = useState(0)
+    const [d, Setd] = useState(0)
+    const[area, SetArea] = useState(0)
 
     const router = useRouter();
 
     function calculates(){
-        let result = (f+b)*a*d/2
-        Setd(result) 
+        let result = (f + b) + (a + d)
+        SetArea(result)
     }
 
     return(
@@ -21,38 +22,38 @@ export default function part(){
             <Text style={Styles.MainTitle}>คำนวณพื่นที่สี่เหลี่ยมค้างหมู</Text>
             <Button title="กลับหน้าแรก"  onPress={() => router.navigate('/App')}/>
                 {/*<Button title/> */}
-                <Text>หน้า{fa}หลัง{ba}ข้าง1{aa}ข้าง2{da}</Text>
-                
+                <Text>หน้า{f},หลัง{b},ข้าง{a},ข้าง{d},พื้นที่{area}</Text>
+
                 <TextInput
-                value={fa.toString()}
+                value={f.toString()}
                 onChangeText={(w) => Setf(Number(w))}
                 style={Styles.textInput}
                 placeholder="กรอกความยาว"
                 />
 
                 <TextInput
-                value={ba.toString()}
+                value={b.toString()}
                 onChangeText={(l) => Setb(Number(l))}
                 style={Styles.textInput}
                 placeholder="กรอกความเซนติเมตร"
                 />
 
-                <TextInput 
-                value={aa.toString()}
+                <TextInput
+                value={a.toString()}
                 onChangeText={(l) => Seta(Number(l))}
                 style={Styles.textInput}
                 placeholder="กรอกความเซนติเมตร"
                 />
-
-                <TextInput   
-                value={da.toString()}
+                <TextInput
+                value={d.toString()}
                 onChangeText={(l) => Setd(Number(l))}
                 style={Styles.textInput}
                 placeholder="กรอกความเซนติเมตร"
                 />
+                
 
 
-
+                
                 <Button title="คำนวณ"
                 onPress={calculates}
                 />
