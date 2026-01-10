@@ -25,28 +25,28 @@ export default function part(){
                 
                 <TextInput
                 value={fa.toString()}
-                onChangeText={(f) => Setf(Number(f))}
+                onChangeText={(w) => Setf(Number(w))}
                 style={Styles.textInput}
                 placeholder="กรอกความยาว"
                 />
 
                 <TextInput
                 value={ba.toString()}
-                onChangeText={(d) => Setb(Number(b))}
+                onChangeText={(l) => Setb(Number(l))}
                 style={Styles.textInput}
                 placeholder="กรอกความเซนติเมตร"
                 />
 
                 <TextInput
                 value={aa.toString()}
-                onChangeText={(a) => Seta(Number(a))}
+                onChangeText={(l) => Seta(Number(l))}
                 style={Styles.textInput}
                 placeholder="กรอกความเซนติเมตร"
                 />
 
                 <TextInput
                 value={da.toString()}
-                onChangeText={(d) => Setd(Number(d))}
+                onChangeText={(l) => Setd(Number(l))}
                 style={Styles.textInput}
                 placeholder="กรอกความเซนติเมตร"
                 />
