@@ -4,10 +4,10 @@ import { use, useState } from "react";
 
 export default function part(){
 
-    const [f, Setf] = useState(0)
-    const [b, Setb] = useState(0)
-    const [a,Seta] = useState(0)
-    const [d, Setd] = useState(0)
+    const [fa, Setf] = useState(0)
+    const [ba, Setb] = useState(0)
+    const [aa,Seta] = useState(0)
+    const [da, Setd] = useState(0)
 
     const router = useRouter();
 
@@ -24,28 +24,28 @@ export default function part(){
                 <Text>หน้า{}หลัง{}ข้าง1{}ข้าง2{}</Text>
                 
                 <TextInput
-                value={f.toString()}
+                value={fa.toString()}
                 onChangeText={(w) => Setf(Number(w))}
                 style={Styles.textInput}
                 placeholder="กรอกความยาว"
                 />
 
                 <TextInput
-                value={b.toString()}
+                value={ba.toString()}
                 onChangeText={(l) => Setb(Number(l))}
                 style={Styles.textInput}
                 placeholder="กรอกความเซนติเมตร"
                 />
 
                 <TextInput
-                value={a.toString()}
+                value={aa.toString()}
                 onChangeText={(l) => Seta(Number(l))}
                 style={Styles.textInput}
                 placeholder="กรอกความเซนติเมตร"
                 />
 
                 <TextInput
-                value={d.toString()}
+                value={da.toString()}
                 onChangeText={(l) => Setd(Number(l))}
                 style={Styles.textInput}
                 placeholder="กรอกความเซนติเมตร"
