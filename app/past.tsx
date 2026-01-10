@@ -21,7 +21,7 @@ export default function part(){
             <Text style={Styles.MainTitle}>คำนวณพื่นที่สี่เหลี่ยมค้างหมู</Text>
             <Button title="กลับหน้าแรก"  onPress={() => router.navigate('/App')}/>
                 {/*<Button title/> */}
-                <Text>หน้า{}หลัง{}ข้าง1{}ข้าง2{}</Text>
+                <Text>หน้า{fa}หลัง{ba}ข้าง1{aa}ข้าง2{da}</Text>
                 
                 <TextInput
                 value={fa.toString()}
