@@ -8,9 +8,17 @@ export default function App(){
 
     return(
         <View style={Styles.container}>
-            <Text style={Styles.MainTitle}>หน้าแรก</Text>
+            <Text style={Styles.MainTitle}>หน้าบ้าน</Text>
             <Button title="ไปหน้าสอง" onPress={() => router.navigate('/square')}/>
+
+
+            
+            <Button title="ไปหน้าสาม" onPress={() => router.navigate('/past')}/>
+
         </View>
+
+        
+        
     )
 }
 const Styles = StyleSheet.create({
