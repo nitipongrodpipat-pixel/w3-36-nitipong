@@ -1,45 +1,62 @@
 import { Button, StyleSheet, Text, TextInput, View, } from "react-native";
 import { useRouter } from "expo-router";
 import { use, useState } from "react";
-import { BottomTabBar } from "@react-navigation/bottom-tabs";
 
-export default function Square(){
+export default function part(){
 
-    const [width, Setwidth] = useState(0)
-    const [lenght, SetLanght] = useState(0)
-    const [area, SetArea] = useState(0)
+    const [f, Setf] = useState(0)
+    const [b, Setb] = useState(0)
+    const [a,Seta] = useState(0)
+    const [d, Setd] = useState(0)
+    const[area, SetArea] = useState(0)
 
     const router = useRouter();
 
     function calculates(){
-        let result = width * lenght
+        let result = (f + b) + (a + d)
         SetArea(result)
     }
 
     return(
         <View style={Styles.container}>
-            <Text style={Styles.MainTitle}>คำนวณพื่นที่สี่เหลี่ยม</Text>
+            <Text style={Styles.MainTitle}>คำนวณพื่นที่สี่เหลี่ยมค้างหมู</Text>
             <Button title="กลับหน้าแรก"  onPress={() => router.navigate('/App')}/>
                 {/*<Button title/> */}
-                <Text> กว้าง {width}ซม.ยาว{lenght} ซม. พื้นที่ {area} ตร.ซม</Text>
-                
+                <Text>หน้า{f},หลัง{b},ข้าง{a},ข้าง{d},พื้นที่{area}</Text>
+
                 <TextInput
-                style={Styles.textInput}
-                placeholder="กรอกความกว้าง"
-                value={width.toString()}
-                onChangeText={(w) => Setwidth(Number(w))}
-                />
-                <TextInput
-                value={lenght.toString()}
-                onChangeText={(l) => SetLanght(Number(l))}
+                value={f.toString()}
+                onChangeText={(w) => Setf(Number(w))}
                 style={Styles.textInput}
                 placeholder="กรอกความยาว"
                 />
 
+                <TextInput
+                value={b.toString()}
+                onChangeText={(l) => Setb(Number(l))}
+                style={Styles.textInput}
+                placeholder="กรอกความเซนติเมตร"
+                />
+
+                <TextInput
+                value={a.toString()}
+                onChangeText={(l) => Seta(Number(l))}
+                style={Styles.textInput}
+                placeholder="กรอกความเซนติเมตร"
+                />
+                <TextInput
+                value={d.toString()}
+                onChangeText={(l) => Setd(Number(l))}
+                style={Styles.textInput}
+                placeholder="กรอกความเซนติเมตร"
+                />
+                
+
+
+                
                 <Button title="คำนวณ"
                 onPress={calculates}
                 />
-
         </View>
     )
 }
@@ -61,8 +78,6 @@ const Styles = StyleSheet.create({
     textInput:{
         borderWidth:1,
         width:"80%",
-        borderColor:"white"
+        borderColor:"green"
     }
-
-    
 })
