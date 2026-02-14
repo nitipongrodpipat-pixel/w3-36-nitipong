@@ -19,7 +19,7 @@ export default function part(){
 
     return(
         <View style={Styles.container}>
-            <Text style={Styles.MainTitle}>คำนวณพื่นที่สี่เหลี่ยมค้างหมู</Text>
+            <Text style={Styles.MainTitle}>คำนวณพื่นที่สี่เหลี่ยมคางหมู</Text>
             <Button title="กลับหน้าแรก"  onPress={() => router.navigate('/App')}/>
                 {/*<Button title/> */}
                 <Text>หน้า{f},หลัง{b},ข้าง{a},ข้าง{d},พื้นที่{area}</Text>
